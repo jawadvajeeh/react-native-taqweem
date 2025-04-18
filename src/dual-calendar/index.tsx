@@ -188,8 +188,8 @@ export function DualCalendar({
         renderHeader(headerProps)
       ) : (
         <CalendarHeader
-          headerTheme={{header: calendarTheme.header}}
-          {...headerProps}
+		{...headerProps}
+		headerTheme={{header: calendarTheme.header, headerTextStyle:calendarTheme.headerTextStyle}}
         />
       )}
       {/* Calendar WeekDayName With Days Grid */}
@@ -221,17 +221,17 @@ function CalendarHeader({
     <View style={[styles.header, headerTheme.header]}>
       {canGoPreviousMonth && (
         <TouchableOpacity style={styles.arrow} onPress={goToPrevMonth}>
-          <Text style={styles.nav}>‹</Text>
+          <Text style={[styles.nav,headerTheme.headerTextStyle]}>‹</Text>
         </TouchableOpacity>
       )}
       <View style={[styles.titleWrapper]}>
-        <Text style={[styles.monthTitleStyle, headerTheme.monthTitleStyle]}>
+        <Text style={[styles.monthTitleStyle, headerTheme.headerTextStyle]}>
           {calendarTitle}
         </Text>
       </View>
       {canGoNextMonth && (
         <TouchableOpacity style={styles.arrow} onPress={goToNextMonth}>
-          <Text style={styles.nav}>›</Text>
+          <Text style={[styles.nav,headerTheme.headerTextStyle]}>›</Text>
         </TouchableOpacity>
       )}
     </View>
@@ -250,7 +250,7 @@ function WeekDayNames({weekDayTheme = {}}: WeekDayNamesProps) {
 type MonthViewProps = {} & DayGridProps;
 function MonthView(props: MonthViewProps) {
   return (
-    <View style={[styles.calendarGrid]}>
+    <View style={[styles.calendarGrid,props.dayGridTheme?.calendarGrid]}>
       <WeekDayNames
         weekDayTheme={{dayNameCell: props.dayGridTheme?.dayNameCell}}
       />
@@ -311,6 +311,8 @@ function DayGrid({
               style={[
                 styles.dayTextStyle,
                 dayGridTheme.dayTextStyle,
+				isToday && dayGridTheme.todayTextStyle,
+				isSelected && dayGridTheme.selectedDayTextStyle,
                 !dayObj.isCurrentMonth && styles.nonCurrentMonthTextStyle,
                 !dayObj.isCurrentMonth && dayGridTheme.nonCurrentMonthTextStyle,
               ]}>

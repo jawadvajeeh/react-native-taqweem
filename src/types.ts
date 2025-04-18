@@ -14,7 +14,7 @@ export interface HeaderProps {
 	calendarTitle?: string;
 	canGoPreviousMonth?: boolean;
 	canGoNextMonth?: boolean;
-	headerTheme?: Pick<CalendarTheme, 'header' | 'monthTitleStyle'>;
+	headerTheme?: Pick<CalendarTheme, 'header' | 'headerTextStyle'>;
 }
 
 export type CalendarMode = 'gregorian' | 'hijri';
@@ -25,7 +25,7 @@ export type DayGridProps = {
 	fullDateFormat: string;
 	selectedDateStr: string | null;
 	todaysDate: string;
-	dayGridTheme?: Pick<CalendarTheme, 'calendarGrid' | 'dayCell' | 'dayNameCell' | 'dayTextStyle' | 'todayCellStyle' | 'selectedDayStyle' | 'nonCurrentMonthTextStyle'>;
+	dayGridTheme?: Pick<CalendarTheme, 'calendarGrid' | 'dayCell' | 'dayNameCell' | 'dayTextStyle' | 'todayCellStyle' | 'selectedDayStyle' | 'nonCurrentMonthTextStyle' | 'todayTextStyle' | 'selectedDayTextStyle'>;
 	handleSelectDay: (props: CalendarDay) => void;
 };
 
@@ -86,8 +86,10 @@ export type CalendarTheme = Partial<{
 	todayCellStyle: ViewStyle;
 	selectedDayStyle: ViewStyle;
 	calendarView: ViewStyle;
-	monthTitleStyle: TextStyle;
 	dayNameCell: TextStyle;
 	nonCurrentMonthTextStyle: TextStyle;
 	dayTextStyle: TextStyle;
+	selectedDayTextStyle: TextStyle;
+	todayTextStyle: TextStyle;
+	headerTextStyle: TextStyle;
 }>;
