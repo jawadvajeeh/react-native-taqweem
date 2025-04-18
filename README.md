@@ -131,6 +131,20 @@ const Home = () => {
 
 ```
 
+You can customize calendar header
+
+```typescript
+
+ <View style={styles.main}>
+        <DualCalendar
+          renderHeader={props => <ModernCalendarHeader {...props} />}
+          calendarMode={calendarMode}
+          calendarTheme={calendarTheme}
+        />
+ </View>
+
+```
+
 
 ## Screenshots
 
@@ -150,6 +164,9 @@ const Home = () => {
 
 ![Theme support](./assets/calendar-theme.gif)
 
+### Customize Header
+
+![Custom Header](./assets/custom-header.jpg)
 
 ## Acknowledgements
 
