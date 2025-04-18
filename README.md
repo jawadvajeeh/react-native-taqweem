@@ -69,6 +69,49 @@ Install **react-native-taqweem** with npm
   npm install react-native-taqweem
 ```
     
+## Usage/Examples
+
+```typescript
+import React from 'react';
+import {StyleSheet, View} from 'react-native';
+import {Screen} from '@src/components';
+import {DualCalendar} from 'react-native-taqweem';
+
+const Home = () => {
+  return (
+    <Screen>
+      <View style={styles.main}>
+    //   Default calendar mode is gregorian
+        <DualCalendar />
+      </View>
+    </Screen>
+  );
+};
+
+export default Home;
+```
+
+You can make the `calendarMode` as hijri to render Hijri calendar. 
+
+```typescript
+
+<DualCalendar calendarMode="hijri" />
+
+
+```
+
+
+## Screenshots
+
+### Gregorian Calendar
+
+![Gregorian Calendar](./assets/calendar_mode_gregorian.png)
+
+### Hijri Calendar
+
+![Hijri Calendar](./assets/calendar_mode_hijri.png)
+
+
 ## Acknowledgements
 
 > Built with ❤️ using `moment-hijri` under the hood, supports localization, RTL, theming, and full date control.
