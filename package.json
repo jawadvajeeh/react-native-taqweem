@@ -1,0 +1,12 @@
+{
+  "name": "react-native-taqweem",
+  "version": "1.0.0",
+  "description": "**A dual calendar component (Hijri + Gregorian) for React Native** — minimal, customizable, and theme-ready.  \r Perfect for apps needing culturally-aware calendars, Islamic date pickers, or just modern UX flexibility.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
