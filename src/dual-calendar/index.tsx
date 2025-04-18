@@ -57,6 +57,10 @@ export function DualCalendar({
     !_nextMonth.isAfter(effectiveMaxDate, 'month') &&
     (allowFutureDates || !_nextMonth.isAfter(moment(), 'month'));
 
+	useEffect(() => {
+		setIsHijri(calendarMode === 'hijri')
+	},[calendarMode])
+
   useEffect(() => {
     if (!currentYearMonth) {
       return;

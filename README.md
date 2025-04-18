@@ -100,6 +100,37 @@ You can make the `calendarMode` as hijri to render Hijri calendar.
 
 ```
 
+You can configure the theme using `calendarTheme` prop.
+
+```typescript
+
+import {CalendarTheme, DualCalendar} from 'react-native-taqweem';
+import {useTheme} from '@src/context/theme-context';
+
+const getCalendarThemeStyles = (theme: 'light' | 'dark') =>
+  StyleSheet.create<CalendarTheme>({
+    calendarView: {
+      backgroundColor: theme === 'light' ? '#f8f9fa' : '#212529',
+      borderRadius: 16,
+    },
+	...
+	// more configurable properties
+
+const Home = () => {
+  const {theme, toggleTheme} = useTheme();
+  const calendarTheme = getCalendarThemeStyles(theme);
+  return (
+    <Screen>
+      <Button title="Toggle Theme" onPress={toggleTheme} />
+      <View style={styles.main}>
+        <DualCalendar calendarTheme={calendarTheme} />
+      </View>
+    </Screen>
+  );
+};
+
+```
+
 
 ## Screenshots
 
@@ -110,6 +141,10 @@ You can make the `calendarMode` as hijri to render Hijri calendar.
 ### Hijri Calendar
 
 ![Hijri Calendar](./assets/calendar_mode_hijri.png)
+
+### Configurable Theme and Look
+
+![Hijri Calendar](./assets/calendar-theme.gif)
 
 
 ## Acknowledgements
