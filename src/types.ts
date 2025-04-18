@@ -15,6 +15,8 @@ export interface HeaderProps {
 	canGoPreviousMonth?: boolean;
 	canGoNextMonth?: boolean;
 	headerTheme?: Pick<CalendarTheme, 'header' | 'headerTextStyle'>;
+	isHijri?: boolean;
+	dateObj?: Moment;
 }
 
 export type CalendarMode = 'gregorian' | 'hijri';

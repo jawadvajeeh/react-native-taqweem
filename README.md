@@ -142,9 +142,13 @@ const Home = () => {
 
 ![Hijri Calendar](./assets/calendar_mode_hijri.png)
 
+### Switch between calendar modes
+
+![Hijri Calendar](./assets/toggle-calendar-mode.gif)
+
 ### Configurable Theme and Look
 
-![Hijri Calendar](./assets/calendar-theme.gif)
+![Theme support](./assets/calendar-theme.gif)
 
 
 ## Acknowledgements

@@ -174,6 +174,8 @@ export function DualCalendar({
     goToNextMonth,
     goToPrevMonth,
     toggleCalendarMode,
+	isHijri,
+	dateObj: currentDate
   };
 
   const dayGridProps: DayGridProps = {
