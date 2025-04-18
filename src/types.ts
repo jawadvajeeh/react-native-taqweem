@@ -1,9 +1,9 @@
 import type { Moment } from 'moment-hijri';
-import type { StyleProp, TextStyle, ViewStyle } from 'react-native';
+import { type TextStyle, type ViewStyle } from 'react-native';
 
 export interface CalendarDay {
 	label: string;
-	date: moment.Moment;
+	date: Moment;
 	isCurrentMonth: boolean;
 }
 
@@ -80,14 +80,14 @@ export type YearMonthKey = `${number}-${number}`;
 export type YearMonthDayKey = `${number}-${number}-${number}`;
 
 export type CalendarTheme = Partial<{
-	header: StyleProp<ViewStyle>;
-	calendarGrid: StyleProp<ViewStyle>;
-	dayCell: StyleProp<ViewStyle>;
-	todayCellStyle: StyleProp<ViewStyle>;
-	selectedDayStyle: StyleProp<ViewStyle>;
-	calendarView: StyleProp<ViewStyle>;
-	monthTitleStyle: StyleProp<TextStyle>;
-	dayNameCell: StyleProp<TextStyle>;
-	nonCurrentMonthTextStyle: StyleProp<TextStyle>;
-	dayTextStyle: StyleProp<TextStyle>;
+	header: ViewStyle;
+	calendarGrid: ViewStyle;
+	dayCell: ViewStyle;
+	todayCellStyle: ViewStyle;
+	selectedDayStyle: ViewStyle;
+	calendarView: ViewStyle;
+	monthTitleStyle: TextStyle;
+	dayNameCell: TextStyle;
+	nonCurrentMonthTextStyle: TextStyle;
+	dayTextStyle: TextStyle;
 }>;
