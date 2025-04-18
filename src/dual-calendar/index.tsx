@@ -203,6 +203,8 @@ export function DualCalendar({
           nonCurrentMonthTextStyle: calendarTheme.nonCurrentMonthTextStyle,
           selectedDayStyle: calendarTheme.selectedDayStyle,
           todayCellStyle: calendarTheme.todayCellStyle,
+		  todayTextStyle: calendarTheme.todayTextStyle,
+		  selectedDayTextStyle: calendarTheme.selectedDayTextStyle
         }}
       />
     </View>

@@ -80,16 +80,28 @@ export type YearMonthKey = `${number}-${number}`;
 export type YearMonthDayKey = `${number}-${number}-${number}`;
 
 export type CalendarTheme = Partial<{
+	// Set Calendar Header Style
 	header: ViewStyle;
+	// Set Grid Style Day Names and Days
 	calendarGrid: ViewStyle;
+	// Set Day Cell Style
 	dayCell: ViewStyle;
+	// Set how today's day is styled
 	todayCellStyle: ViewStyle;
+	// Set how selected day is styled
 	selectedDayStyle: ViewStyle;
+	// Set calendar view style
 	calendarView: ViewStyle;
+	// Set day name cell style
 	dayNameCell: TextStyle;
+	// Set how nonCurrentMonth text is styled
 	nonCurrentMonthTextStyle: TextStyle;
+	// Set day text style
 	dayTextStyle: TextStyle;
+	// Set selectedDay text style
 	selectedDayTextStyle: TextStyle;
+	// Set today text style
 	todayTextStyle: TextStyle;
+	// Set header text style
 	headerTextStyle: TextStyle;
 }>;
